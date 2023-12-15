@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - Main Server</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      text-decoration: none;
+      background-color: #5fd163cf;
+      color: #ffffff;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #5ed764;
+    }
+
+    .feature-box {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      text-align: left;
+    }
+
+    footer {
+      background-color: #222;
+      padding: 10px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Mobile Styles */
+    @media only screen and (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      .main-content {
+        padding: 10px;
+      }
+
+      .feature-box {
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .cta-button {
+        padding: 8px 16px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome To VortexUnleashed</h1>
+    <p>Welcome to aVortexUnleahed Everything all in one place at alll times</p>
+  </header>
+
+  <div class="main-content">
+    <div class="feature-box">
+      <h2>Updates - V1.0</h2>
+      <p>We have Stopped Using Web-proxys</p>
+      <p>We have Moved To HTML 5</p>
+      <p>We are now using CSS +1 and more PHP Features</p>
+      <p>We have improved The Security of Our Website</p>
+    </div>
+
+    <div class="feature-box">
+
+      <h2>Online / Offline Server Details</h2>
+      <p>Landing_Page - <span class="online"></span></p>
+      <p>Main_Page - <span class="offline"></p>
+      <p>Back_Pages - <span class="offline"></p>
+      <p>Main_Server - <span class="unstable"></span></p>
+      <h2>Scheduled Downtime - </span> <span id="countdown"></span> </h2>
+    </div>
+
+
+    <a href="Unv.html" class="cta-button">Contiue To Website</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 - 2026 WEBP. All rights reserved to Harry Irwin.</p>
+  </footer>
+
+    <!-- Online / Offile CSS -->
+  <style>
+    .online {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #4CAF50; /* Green */
+        margin-right: 5px; /* Adjust the spacing as needed */
+    }
+
+    .offline {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #F44336; /* Red */
+        margin-right: 5px; /* Adjust the spacing as needed */
+    }
+    
+    .unstable {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ffa600; /* Red */
+        margin-right: 5px; /* Adjust the spacing as needed */
+    }
+</style>
+    <!-- Countdown script 1 -->
+<script>
+     // Set the target date and time (YYYY-MM-DD HH:MM:SS)
+     const targetTime = new Date('2023-12-31T23:59:59');
+
+// Get the countdown element
+const countdownElement = document.getElementById('countdown');
+
+// Function to update the countdown
+function updateCountdown() {
+    const currentTime = new Date();
+    const timeDifference = targetTime - currentTime;
+
+    if (timeDifference > 0) {
+        const seconds = Math.floor(timeDifference / 1000) % 60;
+        const minutes = Math.floor(timeDifference / (1000 * 60)) % 60;
+        const hours = Math.floor(timeDifference / (1000 * 60 * 60)) % 24;
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        setTimeout(updateCountdown, 1000); // Update every second
+    } else {
+        countdownElement.textContent = 'Time expired';
+    }
+}
+
+// Start the countdown
+updateCountdown();
+</script>
+    <!-- Timer CSS -->
+<style>
+    #countdown {
+        font-size: 18px;
+        color: #ff0000;
+        display: inline-block;
+        margin-right: 10px; /* Adjust the spacing as needed */
+    }
+    
+    #countdown1 {
+        font-size: 18px;
+        color: #ff0000;
+        display: inline-block;
+        margin-right: 10px; /* Adjust the spacing as needed */
+    }
+</style>
+
+</body>
+</html>
